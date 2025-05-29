@@ -1,0 +1,10 @@
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Etkinlik Takvimi & Hatirlatici.exe.config
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Etkinlik Takvimi & Hatirlatici.exe
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Etkinlik Takvimi & Hatirlatici.pdb
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.AssemblyReference.cache
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik_Takvimi___Hatirlatici.Form1.resources
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik_Takvimi___Hatirlatici.Properties.Resources.resources
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.GenerateResource.cache
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.CoreCompileInputs.cache
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.exe
+C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.pdb
