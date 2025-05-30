@@ -42,7 +42,7 @@ namespace Etkinlik_Takvimi___Hatirlatici
         private void Hatirlat(Etkinlik e)
         {
             // Çok basit: sadece başlığı göster
-            MessageBox.Show("! HATIRLATMA !: " + e.Baslik);
+            MessageBox.Show(e.Baslik,"! HATIRLATMA !");
             Goster();
         }
 
