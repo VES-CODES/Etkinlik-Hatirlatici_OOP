@@ -8,3 +8,34 @@ C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Ha
 C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.CoreCompileInputs.cache
 C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.exe
 C:\Users\istan\source\repos\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.pdb
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Etkinlik Takvimi & Hatirlatici.exe.config
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Etkinlik Takvimi & Hatirlatici.exe
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Etkinlik Takvimi & Hatirlatici.pdb
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik_Takvimi___Hatirlatici.Form1.resources
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik_Takvimi___Hatirlatici.Properties.Resources.resources
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.GenerateResource.cache
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.exe
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.pdb
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Buffers.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.IO.Pipelines.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Memory.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Text.Json.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.ValueTuple.dll
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Buffers.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.IO.Pipelines.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Memory.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Text.Json.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\bin\Debug\System.ValueTuple.xml
+C:\Users\ACER\Desktop\Etkinlik Takvimi & Hatirlatici\Etkinlik Takvimi & Hatirlatici\obj\Debug\Etkinlik Takvimi & Hatirlatici.csproj.CopyComplete

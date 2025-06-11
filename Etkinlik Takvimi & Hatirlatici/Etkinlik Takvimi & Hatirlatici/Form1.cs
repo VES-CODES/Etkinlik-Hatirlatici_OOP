@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
 using System.Windows.Forms;
 
 namespace Etkinlik_Takvimi___Hatirlatici
@@ -13,23 +15,28 @@ namespace Etkinlik_Takvimi___Hatirlatici
     public partial class Form1 : Form
     {
         // Basitçe bir örnek takvim nesnesi:
-        KullaniciTakvimi takvim = new KullaniciTakvimi();
-
+        // KullaniciTakvimi takvim = new KullaniciTakvimi();
+        private const string DosyaAdi = "Takvim.json";
+        private readonly KullaniciTakvimi takvim;
         public Form1()
         {
             InitializeComponent();
-            // Hatırlatma olduğunda basit mesaj:
+            takvim = new KullaniciTakvimi(this);     // Form1 kendisini syncObj olarak ver
             takvim.Hatirlatma += Hatirlat;
+            this.Load += Form1_Load;
+            this.FormClosing += Form1_FormClosing;
             takvim.Baslat();
             Goster();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoadEventsFromFile();
             dgvEtkinlikler.AutoGenerateColumns = true;
             takvim.Baslat();
             Goster();
         }
+
         private void Goster()
         {
             // DataGridView’i sıfırla, sonra yeniden ata
@@ -48,7 +55,77 @@ namespace Etkinlik_Takvimi___Hatirlatici
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SaveEventsToFile();
             takvim.Durdur();
+        }
+        private void LoadEventsFromFile()
+        {
+            // events.json dosyasının yolu
+            string path = System.IO.Path.Combine(
+                System.Windows.Forms.Application.StartupPath,
+                DosyaAdi
+            );
+
+            if (!System.IO.File.Exists(path))
+                return;
+
+            try
+            {
+                // Dosyayı string olarak oku (otomatik kapanır)
+                string json = System.IO.File.ReadAllText(path);
+
+                // JSON’dan List<Etkinlik> oluştur
+                var liste = System.Text.Json.JsonSerializer
+                             .Deserialize<System.Collections.Generic.List<Etkinlik>>(json);
+
+                if (liste != null)
+                {
+                    foreach (var ev in liste)
+                        takvim.Ekle(ev);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Etkinlikler yüklenirken hata:\n" + ex.Message,
+                    "Hata",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
+
+        private void SaveEventsToFile()
+        {
+            string path = System.IO.Path.Combine(
+                System.Windows.Forms.Application.StartupPath,
+                DosyaAdi
+            );
+
+            try
+            {
+                // JSON seçenekleri
+                var options = new System.Text.Json.JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
+
+                // Listeyi JSON’a çevir
+                string json = System.Text.Json.JsonSerializer
+                              .Serialize(takvim.Listele(), options);
+
+                // Dosyaya yaz (otomatik kapanır)
+                System.IO.File.WriteAllText(path, json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Etkinlikler kaydedilirken hata:\n" + ex.Message,
+                    "Hata",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
 
         private void btnEkle_Click_1(object sender, EventArgs e)
