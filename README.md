@@ -1,43 +1,27 @@
 # Etkinlik Takvimi & Hatırlatıcı
 
-- 235260042  Sudenur KEÇECİ  
-- 220260044  Halil İbrahim TURAN  
+**Öğrenci No & İsim**  
+- 235260042 — Sudenur KEÇECİ  
+- 220260044 — Halil İbrahim TURAN  
 
 ---
 
-## Proje Hakkında  
-Bu Windows Forms uygulaması, kullanıcının belirlediği tarih ve saatlerde gerçekleşecek etkinlikleri listeleyen ve zamanı geldiğinde otomatik olarak hatırlatma yapan basit bir etkinlik takvimi sistemidir.
-
-### Temel Özellikler  
-- Etkinlik ekleme (Başlık, Tarih, Açıklama)  
-- Etkinlik silme  
-- Zamanlayıcı tabanlı otomatik hatırlatma (popup mesaj)  
-- Bellek içi çalışma (şimdilik dosya kaydı yok)  
-- Modern görünümlü arayüz (alt çizgili TextBox’lar, flat butonlar, özelleştirilmiş DataGridView)
+## Proje Özeti  
+Bu Windows Forms uygulaması, kullanıcı tanımlı etkinlikleri zamanında hatırlatır, sesli uyarı verir ve uygulama kapanıp açılsa bile verileri `events.json` dosyasında saklar. Event-driven mimarisi, arayüz soyutlamaları (`IReminder`, `IZamanlayici`) ve dosya tabanlı kalıcılık ile hem basit hem de güvenilir bir hatırlatıcı sistemi sunar.
 
 ---
-### Geliştirme Notları
--KullaniciTakvimi sınıfı içinde System.Windows.Forms.Timer ile her 10 saniyede bir Etkinlikler listesi taranır.
 
--Zamanı gelen ilk etkinlik Hatirlatma event’i ile Form1’e bildirilir ve listeden kaldırılır.
+## Temel Özellikler  
+- **Etkinlik Ekleme**: Başlık, Tarih/Saat (DateTimePicker), Açıklama  
+- **Etkinlik Silme**: Seçili satırı veya “Tümünü Sil” ile toplu silme  
+- **Dosya Kalıcılığı**: `events.json` ile eklenen tüm etkinlikler otomatik yüklenir ve kaydedilir  
+- **Zamanlayıcı & Event**: `System.Timers.Timer` + `Hatirlatma` event’i — zamanı gelince bildirim  
+- **Çoklu Hatırlatma Kuyruğu**: Birbirini beklemeden, sırada bekleyen tüm hatırlatmalar gösterilir  
+- **Sesli Uyarı**: Gömülü WAV dosyası (`Properties.Resources.reminder`) ile özel ses oynatma  
+- **JSON Serileştirme**: `System.Text.Json` ile okunaklı ve genişletilebilir veri formatı  
+- **Modern UI**:  
+  - Alt çizgili TextBox’lar, flat butonlar ve çöp-kutusu ikonu  
+  - Özelleştirilmiş `DataGridView` (satır renkleri, full-row select)  
+  - Tarih/Saat için `DateTimePicker`, Açıklama için çok satırlı TextBox  
 
-#### İlerleyen sürümlerde:
-
--Dosya veya veritabanı tabanlı kalıcılık
-
--Tray icon veya sistem izinli bildirimler (toast)
-
--Etkinlik düzenleme ve filtreleme
-
--Unit test’ler eklenmesi planlanmaktadır.
-
-### Teknolojiler
--C# /.NET Framework
-
--Windows Forms
-
--System.Windows.Forms.Timer
-
--Visual Studio 2022 veya üzeri
-
-
+---
