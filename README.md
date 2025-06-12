@@ -25,3 +25,9 @@ Bu Windows Forms uygulaması, kullanıcı tanımlı etkinlikleri zamanında hat�
   - Tarih/Saat için `DateTimePicker`, Açıklama için çok satırlı TextBox  
 
 ---
+## Uygulama İçi Görseller
+![Uygulama içi görsel11](https://github.com/user-attachments/assets/7f0c1d46-5c76-4a34-9496-ec57fa578b57)
+
+
+![Uygulama içi görsel 2](https://github.com/user-attachments/assets/4e7cbdbc-d5f0-4fdb-b981-94d264bef452)
+
