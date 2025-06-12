@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;            // ← FirstOrDefault için
+using System.Linq;            //  FirstOrDefault için
 using System.Media;
 using System.Timers;
 
@@ -20,23 +20,26 @@ namespace Etkinlik_Takvimi___Hatirlatici
         {
             _timer = new Timer(10_000);  // 10 saniyede bir kontrol
             _timer.SynchronizingObject = syncObj;
+            _timer.AutoReset = true;
             _timer.Elapsed += Timer_Elapsed;
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            // 1. zamanı gelmiş ilk etkinliği bul
+           
+            // zamanı gelmiş ilk etkinliği bulduk
             var due = Etkinlikler.FirstOrDefault(ev => ev.Tarih <= DateTime.Now);
             if (due == null) return;
 
-            // 2. bir kereye mahsus ses çal
+            
             SystemSounds.Exclamation.Play();
 
-            // 3. event’i tetikle (Form1’deki mesaj kutusunu açacak)
+            // event’i tetikle 
             Hatirlatma?.Invoke(due);
 
-            // 4. listeden çıkar (bir daha tetiklenmesin)
+           
             Etkinlikler.Remove(due);
+            
         }
 
         public void Baslat()
@@ -53,6 +56,13 @@ namespace Etkinlik_Takvimi___Hatirlatici
         public void Ekle(Etkinlik e)
         {
             Etkinlikler.Add(e);
+            if (!_timer.Enabled) _timer.Start();
+            if (e.Tarih <= DateTime.Now)
+            {
+                System.Media.SystemSounds.Exclamation.Play();
+                Hatirlatma?.Invoke(e);
+                Etkinlikler.Remove(e);
+            }
         }
 
         public void Sil(Guid id)

@@ -48,9 +48,52 @@ namespace Etkinlik_Takvimi___Hatirlatici
 
         private void Hatirlat(Etkinlik e)
         {
-            // Çok basit: sadece başlığı göster
-            MessageBox.Show(e.Baslik,"! HATIRLATMA !");
+            // takvim.Durdur();
+             using (var player = new System.Media.SoundPlayer(Properties.Resources.reminder))
+             {
+                 player.Play();  
+             }/*
+               * Bu kısımda hata oluşuyor zamanı gelen etkinliğin messageboxı kapanmadan diğeri kapanmıyor.
+             var result = MessageBox.Show(
+               e.Baslik,
+              "! HATIRLATMA !",
+             MessageBoxButtons.OK,
+             MessageBoxIcon.Information
+
+     );
+
+
+             if (result == DialogResult.OK)
+             {
+                 takvim.Sil(e.Id);       // takvimden sil
+                 Goster();               // grid'i yenile
+                 SaveEventsToFile();     // dosyaya kaydet
+             }
+             takvim.Baslat();
+             Goster();*/
+           
+            takvim.Sil(e.Id);
             Goster();
+            SaveEventsToFile();
+
+            // Her uyarıyı kendi STA thread'inde gösteriyorum
+            var t = new System.Threading.Thread(() =>
+            {
+                
+                System.Media.SystemSounds.Exclamation.Play();
+
+                // Modal MessageBox ama yalnızca bu thread'i bloke ediyo
+                System.Windows.Forms.MessageBox.Show(
+                    $"{e.Baslik}\n{e.Tarih:yyyy-MM-dd HH:mm}\n{e.Aciklama}",
+                    "! HATIRLATMA !",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Information
+                );
+            });
+
+            t.IsBackground = true;
+            t.SetApartmentState(System.Threading.ApartmentState.STA);
+            t.Start();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -71,7 +114,7 @@ namespace Etkinlik_Takvimi___Hatirlatici
 
             try
             {
-                // Dosyayı string olarak oku (otomatik kapanır)
+                // Dosyayı string olarak oku (otomatik kapanıyor)
                 string json = System.IO.File.ReadAllText(path);
 
                 // JSON’dan List<Etkinlik> oluştur
@@ -189,6 +232,38 @@ namespace Etkinlik_Takvimi___Hatirlatici
             txtBaslik.Text = secilen.Baslik;
             txtTarih.Text = secilen.Tarih.ToString("yyyy-MM-dd HH:mm");
             txtAciklama.Text = secilen.Aciklama;
+        }
+
+        private void btnTumunuSil_Click(object sender, EventArgs e)
+        {
+            // İsteğe bağlı onay penceresi:
+            var cevap = MessageBox.Show(
+                "Tüm etkinlikleri silmek istediğinize emin misiniz?",
+                "Onay",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+            if (cevap != DialogResult.Yes) return;
+
+            //  uyarı gelmesin diye
+            takvim.Durdur();
+
+            
+            takvim.Listele().Clear();
+
+           
+            Goster();
+
+            // 4) Dosyaya kaydet
+            SaveEventsToFile();
+
+            // Timerı yeniden başlat
+            takvim.Baslat();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
