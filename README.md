@@ -21,8 +21,7 @@ Bu Windows Forms uygulaması, kullanıcı tanımlı etkinlikleri zamanında hat�
 - **JSON Serileştirme**: `System.Text.Json` ile okunaklı ve genişletilebilir veri formatı  
 - **Modern UI**:  
   - Alt çizgili TextBox’lar, flat butonlar ve çöp-kutusu ikonu  
-  - Özelleştirilmiş `DataGridView` (satır renkleri, full-row select)  
-  - Tarih/Saat için `DateTimePicker`, Açıklama için çok satırlı TextBox  
+  - Özelleştirilmiş `DataGridView` (satır renkleri, full-row select)   
 
 ---
 ## Uygulama İçi Görseller
